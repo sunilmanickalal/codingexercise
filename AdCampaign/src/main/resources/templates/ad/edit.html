@@ -1,0 +1,32 @@
+<html layout:decorator="layout">
+<div layout:fragment="content">
+	<form method="post" action="updateList">
+		<div class="form-group">
+			<table>
+				<tr>
+					<td>Enter PartnerID:</td>
+					<td><input type="hidden" name="partner_id"
+						th:value="*{uCampaign.partner_id}" /> <span
+						th:text="*{uCampaign.partner_id}"></span></td>
+				</tr>
+				<tr>
+					<td>Duration:</td>
+					<td><input type="text" name="duration"
+						th:value="*{uCampaign.duration}" /> <input type="hidden"
+						name="creation_date" th:value="*{uCampaign.creation_date}" /></td>
+				</tr>
+				<tr>
+					<td>Ad Content:</td>
+					<td><input type="text" name="ad_content"
+						th:value="*{uCampaign.ad_content}" /></td>
+				</tr>
+				<tr>
+					<td>
+						<button type="submit" id="submit" class="btn btn-primary">Submit</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</form>
+</div>
+</html>

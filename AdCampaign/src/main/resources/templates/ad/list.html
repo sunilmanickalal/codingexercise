@@ -1,0 +1,56 @@
+<html layout:decorator="layout">
+
+<div layout:fragment="content">
+<br/>
+<table>
+<tr>
+<td>
+<a class="btn btn-primary" href="/ad/new">Add New Campaign</a>
+</td>
+</tr>
+<tr>
+<td>
+<font color="red" >
+<span th:text="*{status}"></span>
+</font>
+</td>
+</tr>
+</table>
+    <table class="table table-striped" id="posts_list">
+        <thead>
+        <tr>
+            <td>Partner_ID</td>
+			<td>Creation_Time</td>
+			<td>Duration (seconds)</td>
+			<td>Ad_Content</td>
+			<td colspan="2" align="center">Actions</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr data-th-each="campaign : ${listAllCampaigns}">
+            <td class="message" data-th-text="${campaign.partner_id}"></td>
+			<td class="message" data-th-text="${campaign.screationDate}"></td>
+			<td class="message" data-th-text="${campaign.duration}"></td>
+			<td class="message" data-th-text="${campaign.ad_content}"></td>
+
+            <td>
+                <a th:href="@{'/ad/{partnerId}/delete'(partnerId=${campaign.partner_id})}" class="delete" th:attr="name=${campaign.duration}">
+                        <span class="fa-stack">
+                            <i class="glyphicon glyphicon-trash"></i>
+                        </span>
+                </a>
+            </td>
+
+            <td>
+                <a th:href="@{'/ad/{partnerId}/update'(partnerId=${campaign.partner_id})}" class="update" th:attr="name=${campaign.duration}">
+                    <span class="fa-stack">
+                        <i class="glyphicon glyphicon-edit"></i>
+                    </span>
+
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</html>
