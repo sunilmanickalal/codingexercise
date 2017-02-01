@@ -5,6 +5,9 @@ import java.sql.Timestamp;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 /**
  * @author Sunil Manickalal
  * @version 1.0
@@ -58,6 +61,8 @@ public class Campaign {
 		this.ad_content = ad_content;
 	}
 
+	@JsonIgnore
+    @JsonProperty(value = "creation_date")
 	public Timestamp getCreation_date() {
 		return creation_date;
 	}
@@ -66,6 +71,8 @@ public class Campaign {
 		this.creation_date = creation_date;
 	}
 	
+	@JsonIgnore
+    @JsonProperty(value = "screationDate")
 	public String getScreationDate() {
 		return screationDate;
 	}
