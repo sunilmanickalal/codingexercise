@@ -1,26 +1,36 @@
 <html layout:decorator="layout">
-    <div layout:fragment="content">
-        <form method="post" action="adList" >
-            <div class="form-group">
-                <table>
-			<tr>
-				<td>Enter PartnerID:</td>
-				<td> <input type="text" name="partner_id" /> </td>
-			</tr>
-			<tr>
-				<td>Duration: </td>
-				<td><input type="text" name="duration" /> </td>
-			</tr>
-			<tr>
-				<td>Ad Content:</td>
-				<td><input type="text" name="ad_content" /> </td>
-			</tr>
-			<tr>
-				<td colspan="2" align="center"> <button type="submit" id="submit" class="btn btn-primary">Submit</button> </td>
-			</tr>
-		</table>
-            </div>
-            
-        </form>
-    </div>
+<div layout:fragment="content">
+	<form method="post" action="adList">
+		<div class="form-group">
+			<table>
+				<tr>
+					<td><br/></td>
+					<td><br/></td>
+				</tr>
+				<tr>
+					<td>PartnerID:</td>
+					<td><input type="text" name="partner_id" /></td>
+				</tr>
+				<tr>
+					<td>Duration:</td>
+					<td><input type="text" name="duration" /></td>
+				</tr>
+				<tr>
+					<td>Ad Content:</td>
+					<td><input type="text" name="ad_content" /></td>
+				</tr>
+				<tr>
+					<td><br/></td>
+					<td><br/></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<button type="submit" id="submit" class="btn btn-primary">Submit</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+	</form>
+</div>
 </html>
