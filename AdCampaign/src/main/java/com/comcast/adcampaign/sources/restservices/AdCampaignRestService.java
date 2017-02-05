@@ -30,6 +30,11 @@ public class AdCampaignRestService {
 		return adService.listAllCampaigns();
 	}
 	
+	@RequestMapping(value="/adservice/findByCampaignId/{partnerId}", method=RequestMethod.GET)
+	public Campaign findByCampaignId(@PathVariable String partnerId) {
+		return adService.findByPartnerId(partnerId);
+	}
+	
 	@RequestMapping(value="/adservice/addCampaign", method=RequestMethod.POST)
 	public String addCampaign(@RequestBody Campaign c) {
 		return adService.addCampaign(c);
