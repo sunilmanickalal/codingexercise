@@ -62,7 +62,7 @@ public class Campaign {
 	}
 
 //	@JsonIgnore
-//    @JsonProperty(value = "creation_date")
+//  @JsonProperty(value = "creation_date")
 	public Timestamp getCreation_date() {
 		return creation_date;
 	}
@@ -72,7 +72,7 @@ public class Campaign {
 	}
 	
 //	@JsonIgnore
-//    @JsonProperty(value = "screationDate")
+//  @JsonProperty(value = "screationDate")
 	public String getScreationDate() {
 		return screationDate;
 	}
