@@ -41,7 +41,11 @@ public class AdCampaignRestServiceTest {
 		
 		String URL = "/adservice/findByCampaignId/{partnerId}";
 		
-		String expectedJsonContent = "{\"partner_id\": \"P001\",\"duration\": 30,\"ad_content\": \"This is test content\",\"creation_date\": 1490005947091,\"screationDate\": \"Mar/20/2017 06:32:27\"}";
+		String expectedJsonContent = "{\"partner_id\": \"P001\","
+									+ "\"duration\": 30,"
+									+ "\"ad_content\": \"This is test content\","
+									+ "\"creation_date\": 1490005947091,"
+									+ "\"screationDate\": \"Mar/20/2017 06:32:27\"}";
 		
 		mmvc.perform(get(URL, partnerId).accept(MediaType.APPLICATION_JSON_VALUE))
 			.andExpect(status().isOk())
